@@ -1,0 +1,8 @@
+package com.project.myTest.service.common;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class LoginServiceImple implements LoginService{
+
+}

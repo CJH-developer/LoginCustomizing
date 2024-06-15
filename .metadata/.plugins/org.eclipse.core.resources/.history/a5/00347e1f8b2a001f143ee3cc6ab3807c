@@ -1,0 +1,25 @@
+*{box-sizing: border-box;}
+html, body{margin: 0;padding: 0; font-family: "Noto Sans KR", sans-serif; font-style: normal;}
+ul, ol, li{list-style: none;}
+button, a{cursor: pointer;}
+button, a, li{color: black;}
+a:link, a:hover, a:focus, a:visited{text-decoration: none;}
+
+.join-wrap{width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center; background-image: url("/img/background.jpg"); background-repeat: no-repeat; background-size: 100% 100%;}
+.join-form{width: 30%; height: 70%; display: flex; flex-direction: column; align-items: center; justify-content: space-between;}
+
+.join-h{width: 100%; height: 15%; background: linear-gradient(45deg,rgba(177, 177, 179, 1) 0%, rgba(161, 161, 161, 1) 22%, rgba(110, 110, 110, 1) 85%  ); display: flex; align-items: center; justify-content: center;}
+.join-h span{font-size: 1.5rem; color: white; }
+
+.join-b{width: 100%; height: 84%; background-color: white; display: flex; flex-direction: column; align-items: center; }
+
+.join-input-item1{width: 88%; height: 15%; display: flex; align-items: center; }
+.join-input-item2{width: 88%; height: 33%; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+
+.join-input-item1 span{width: 15%; font-size: 15px; font-weight: bold; margin-right: 15px;}
+.join-input-item1 input{font-size: 15px; width: 80%; height: 50%; border: 1px solid rgb(214, 214, 214); padding-left: 20px; &:focus{outline: none;}}
+.join-input-item1 select{width: 50%; height: 35%; &:focus{outline: none;}}
+
+.join-divide-line{border: 1.5px solid black; width: 100%; margin-top: 20px;}
+
+.join-b button{width: 50%; height: 25%; margin-top: 20px; font-size: 18px;}

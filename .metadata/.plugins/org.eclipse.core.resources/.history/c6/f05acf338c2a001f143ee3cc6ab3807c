@@ -1,0 +1,6 @@
+package com.project.myTest.service.common;
+
+public interface LoginMapper {
+
+	public int join();
+}

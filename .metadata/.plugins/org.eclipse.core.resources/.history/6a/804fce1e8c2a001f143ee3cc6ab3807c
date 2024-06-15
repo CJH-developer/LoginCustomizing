@@ -1,0 +1,5 @@
+package com.project.myTest.command;
+
+public class UserVO {
+
+}

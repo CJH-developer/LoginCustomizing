@@ -1,0 +1,54 @@
+package com.project.myTest.security;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.InsufficientAuthenticationException;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
+
+public class CustomAuthenticationFailure extends SimpleUrlAuthenticationFailureHandler{
+
+	private String redirectURL;
+	private static final int lockyn = 5;
+	private Map<String, Integer> loginAttemps = new HashMap<>();
+	
+	// 인증 실패시 실행
+	@Override
+	public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response,
+			AuthenticationException exception) throws IOException, ServletException {
+		// 로그인 실패시에 다양한 작업 처리
+		
+		String username = request.getParameter("username");
+		System.out.println("fails : " + username);
+		String msg = "Invalid userName or Password";
+		
+		if(exception instanceof BadCredentialsException) {
+			int attemps = loginAttemps.getOrDefault(username, 0);
+			attemps++;
+			loginAttemps.put(username, attempts);
+		}else if(exception instanceof InsufficientAuthenticationException) {
+			msg = "Invalid Secret Key";
+		}
+		
+		
+		response.sendRedirect(redirectURL);
+	}
+
+	public String getRedirectURL() {
+		return redirectURL;
+	}
+
+	public void setRedirectURL(String redirectURL) {
+		this.redirectURL = redirectURL;
+	}
+	
+	
+
+}

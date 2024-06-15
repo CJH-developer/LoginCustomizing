@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoginProject</title>
+
+    <link rel="stylesheet" href="/login.css">
+</head>
+<body>
+
+    <div class="login-wrap">
+        <div class="login-form">
+
+            <div class="login-h"><span>로그인 암호화</span></div>
+
+            <!-- 로그인 전달 폼 -->
+            <form action="" method="post" class="login-b">
+
+                <div class="login-input">
+                    <div class="login-input-item1">
+                        <input type="text" name="username" placeholder="아이디" autocomplete="off">
+                        <input type="password" name="password" placeholder="비밀번호">
+                    </div>
+                    <div class="login-input-item2">
+                        <input type="checkbox" name="remember-me">
+                        <span>아이디 기억하기</span>
+                    </div>
+                </div>
+                <div class="login-btn">
+                    <input type="submit" value="로그인">
+                    <div class="login-btn-member">
+                        <a href="">아이디 찾기</a>
+                        <a href="">비밀번호 찾기</a>
+                        <a href="">회원가입</a>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</body>
+</html>

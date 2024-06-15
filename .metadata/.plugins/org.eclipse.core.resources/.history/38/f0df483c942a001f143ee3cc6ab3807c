@@ -1,0 +1,17 @@
+package com.project.myTest.service.common;
+
+import org.springframework.stereotype.Service;
+
+import com.project.myTest.command.UserVO;
+
+@Service
+public class LoginServiceImple implements LoginService{
+
+	// 회원 가입
+	@Override
+	public int join(UserVO vo) {
+		
+		return 0;
+	}
+
+}

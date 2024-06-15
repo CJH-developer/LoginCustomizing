@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+*{box-sizing: border-box;}
+html, body{margin: 0;padding: 0; font-family: "Noto Sans KR", sans-serif; font-style: normal;}
+ul, ol, li{list-style: none;}
+button, a{cursor: pointer;}
+button, a, li{color: black;}
+a:link, a:hover, a:focus, a:visited{text-decoration: none;}
+
+.login-wrap{width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center; background-image: url("/img/background.jpg"); background-repeat: no-repeat; background-size: 100% 100%;}
+.login-form{width: 30%; height: 60%; display: flex; flex-direction: column; justify-content: space-between; align-items: center;}
+
+.login-h{width: 100%; height: 15%; background: linear-gradient(45deg,rgba(177, 177, 179, 1) 0%, rgba(161, 161, 161, 1) 22%, rgba(110, 110, 110, 1) 85%  ); display: flex; align-items: center; justify-content: center;}
+.login-h span{font-size: 1.5rem; color: white; }
+
+.login-b{width: 100%; height: 84%; background-color: white; display: flex; flex-direction: column;}
+
+.login-input{width: 100%; height: 60%; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+
+.login-input-item1{width: 88%; height: 85%; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+.login-input-item1 input{margin: 16px 0px; width: 100%; height: 30%; padding-left: 10px; font-size: 18px; &:focus{outline: none;}}
+
+.login-input-item2{width: 88%; height: 15%; display: flex; align-items: center; padding-bottom: 20px; border-bottom: 2px solid black; }
+.login-input-item2 > input{width: 20px; height: 20px; }
+.login-input-item2 span{margin-left: 10px;}
+
+.login-btn{width: 100%; height: 40%; display: flex; flex-direction: column; align-items: center; }
+.login-btn input{width: 88%; height: 30%; margin-top: 10px;}
+
+.login-btn-member{width: 88%; display: flex; align-items: center;}
+.login-btn-member a{margin-right: 10px; font-size: 13px; margin-top: 5px;}
+.login-btn-member a:hover{border-bottom: 1px solid black;}

@@ -1,0 +1,5 @@
+package com.project.myTest.security;
+
+public class CustomRememberMeHandler {
+
+}

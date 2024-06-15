@@ -1,0 +1,40 @@
+package com.project.myTest.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.project.myTest.command.UserVO;
+import com.project.myTest.service.common.LoginService;
+
+
+@Controller
+public class LoginController {
+
+	@Autowired
+	private BCryptPasswordEncoder bCryptPasswordEncoder;
+	
+	@Autowired
+	private LoginService loginService;
+	
+	@GetMapping("/main")
+	public String main() {
+		return "main";
+	}	
+	
+	@GetMapping("/join")
+	public String join() {
+		return "join/join";
+	}
+	
+	@PostMapping("/joinForm")
+	public String joinForm(UserVO vo) {
+		
+		String pw = bCryptPasswordEncoder.encode(vo.getPassword());
+		
+		return "main";
+	}
+	
+}

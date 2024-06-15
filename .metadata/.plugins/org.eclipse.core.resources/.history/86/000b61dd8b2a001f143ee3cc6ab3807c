@@ -1,0 +1,5 @@
+package com.project.myTest.service.common;
+
+public class LoginServiceImple {
+
+}

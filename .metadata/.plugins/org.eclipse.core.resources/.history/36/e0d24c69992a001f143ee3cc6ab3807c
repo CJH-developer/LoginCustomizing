@@ -1,0 +1,11 @@
+package com.project.myTest.security;
+
+import org.springframework.security.core.userdetails.UserDetails;
+
+import com.project.myTest.command.UserVO;
+
+public class MyUserDetails implements UserDetails{
+
+	private UserVO userVO;
+	
+}

@@ -1,0 +1,11 @@
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.project.myTest.service.common.LoginMapper">
+  
+  	<insert id="join" resultType="com.project.myTest.command.UserVO">
+  		insert into member values ( #{id}, #{username}, #{password}, #{name}, #{role})
+  	</insert>
+  
+  </mapper>
